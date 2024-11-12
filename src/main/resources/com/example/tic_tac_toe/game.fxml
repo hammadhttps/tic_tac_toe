@@ -34,10 +34,13 @@
             </Button>
          </children>
       </GridPane>
-      <Label fx:id="resultLabel" layoutX="266.0" layoutY="26.0" prefHeight="75.0" prefWidth="273.0" text="TIC TAC TOE" textOverrun="WORD_ELLIPSIS">
+      <Label fx:id="resultLabel" alignment="CENTER" layoutX="266.0" layoutY="26.0" prefHeight="75.0" prefWidth="273.0" text="TIC TAC TOE" textAlignment="CENTER" textOverrun="WORD_ELLIPSIS">
          <font>
             <Font name="Calibri Bold" size="52.0" />
          </font></Label>
-      <Label layoutX="298.0" layoutY="109.0" prefHeight="66.0" prefWidth="192.0" />
+      <Button fx:id="newgame" layoutX="332.0" layoutY="114.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="154.0" style="-fx-background-color: Gray;" text="New Game">
+         <font>
+            <Font name="Arial" size="24.0" />
+         </font></Button>
    </children>
 </AnchorPane>
