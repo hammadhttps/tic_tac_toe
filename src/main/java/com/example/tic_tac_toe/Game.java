@@ -11,10 +11,10 @@ public class Game {
     private GridPane gridPane;
 
     @FXML
-    private Label resultLabel; // Placeholder label to display results (win/draw)
+    private Label resultLabel;
 
-    private boolean playerXTurn = true; // True if it's X's turn, false if it's O's turn
-    private Button[][] board = new Button[3][3]; // 2D array to track buttons on the grid
+    private boolean playerXTurn = true;
+    private Button[][] board = new Button[3][3];
 
     // Initialize the board and set up the game
     @FXML
