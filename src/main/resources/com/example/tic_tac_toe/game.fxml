@@ -38,7 +38,7 @@
                 </children>
             </GridPane>
             <!-- Line for indicating winning row/column/diagonal -->
-            <Line fx:id="winline" startX="0" startY="0" endX="0" endY="0" stroke="red" strokeWidth="5.0" visible="false" />
+            <Line fx:id="winline" startX="0" startY="0" endX="0" endY="0" stroke="darkgray" strokeWidth="5.0" visible="false" />
         </StackPane>
 
         <!-- Other components outside the StackPane -->
