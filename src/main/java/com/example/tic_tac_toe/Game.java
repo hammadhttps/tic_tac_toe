@@ -131,7 +131,7 @@ public class Game {
         return null;
     }
     @FXML
-    public void Start_newgame(ActionEvent actionEvent) {
+    public void Start_newgame(ActionEvent actionEvent) throws InterruptedException {
         if (actionEvent.getSource() == newgame) {
             for (Button[] row : board) {
                 for (Button button : row) {
@@ -145,7 +145,10 @@ public class Game {
             winline.setVisible(false);
 
             // Clear result text
-            resultLabel.setText("");
+            resultLabel.setText("New Game");
+            sleep(1200);
+            resultLabel.setText("Tic-Tac-Toe");
+
         }
     }
     private void drawWinningLine(int startRow, int startCol, int endRow, int endCol) {
@@ -154,10 +157,22 @@ public class Game {
             double cellHeight = gridPane.getHeight() / 3;
 
             // Calculate starting and ending points for the line based on cell positions
-            winline.setStartX(startCol * cellWidth + cellWidth / 2);
-            winline.setStartY(startRow * cellHeight + cellHeight / 2);
-            winline.setEndX(endCol * cellWidth + cellWidth / 2);
-            winline.setEndY(endRow * cellHeight + cellHeight / 2);
+            if (startRow == endRow) { // Horizontal line
+                winline.setStartX(startCol * cellWidth);
+                winline.setStartY(startRow * cellHeight + cellHeight / 2);
+                winline.setEndX(endCol * cellWidth + cellWidth);
+                winline.setEndY(endRow * cellHeight + cellHeight / 2);
+            } else if (startCol == endCol) { // Vertical line
+                winline.setStartX(startCol * cellWidth + cellWidth / 2);
+                winline.setStartY(startRow * cellHeight);
+                winline.setEndX(endCol * cellWidth + cellWidth / 2);
+                winline.setEndY(endRow * cellHeight + cellHeight);
+            } else { // Diagonal or anti-diagonal
+                winline.setStartX(startCol * cellWidth + cellWidth / 2);
+                winline.setStartY(startRow * cellHeight + cellHeight / 2);
+                winline.setEndX(endCol * cellWidth + cellWidth / 2);
+                winline.setEndY(endRow * cellHeight + cellHeight / 2);
+            }
 
             // Make the line visible
             winline.setVisible(true);
