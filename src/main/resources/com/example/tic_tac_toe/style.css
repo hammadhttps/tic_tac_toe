@@ -1,0 +1,38 @@
+/* Root styling for AnchorPane */
+AnchorPane {
+    -fx-background-color: #f0f0f0;
+}
+
+/* Label for the title "TIC TAC TOE" */
+Label {
+    -fx-text-fill: #333;
+    -fx-font-size: 52px;
+    -fx-font-family: "Calibri";
+    -fx-font-weight: bold;
+}
+
+/* Styling for each Button in the GridPane */
+Button {
+    -fx-font-size: 36px;
+    -fx-font-family: "Arial";
+    -fx-font-weight: bold;
+    -fx-background-color: #e0e0e0;
+    -fx-border-color: #666;
+    -fx-border-width: 1px;
+    -fx-text-fill: #333;
+}
+
+Button:hover {
+    -fx-background-color: #d4d4d4;
+}
+
+Button:pressed {
+    -fx-background-color: #c9c9c9;
+}
+
+/* GridPane styling for layout consistency */
+GridPane {
+    -fx-alignment: center;
+    -fx-hgap: 5px;
+    -fx-vgap: 5px;
+}
