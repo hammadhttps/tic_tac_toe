@@ -5,6 +5,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
+import javafx.scene.shape.Line;
 
 import static java.lang.Thread.sleep;
 
@@ -18,6 +19,9 @@ public class Game {
 
     @FXML
     private Button newgame;
+
+    @FXML
+    private Line winline;
 
     private boolean playerXTurn = true;
     private Button[][] board = new Button[3][3];
@@ -61,21 +65,27 @@ public class Game {
     private boolean checkWin(int row, int col) {
         String symbol = board[row][col].getText();
 
-        // Check the row
+        // Check row
         if (board[row][0].getText().equals(symbol) && board[row][1].getText().equals(symbol) && board[row][2].getText().equals(symbol)) {
+            drawWinningLine(row, 0, row, 2); // Draw horizontal line
             return true;
         }
 
-        // Check the column
+        // Check column
         if (board[0][col].getText().equals(symbol) && board[1][col].getText().equals(symbol) && board[2][col].getText().equals(symbol)) {
+            drawWinningLine(0, col, 2, col); // Draw vertical line
             return true;
         }
 
-        // Check the diagonals
+        // Check main diagonal
         if (board[0][0].getText().equals(symbol) && board[1][1].getText().equals(symbol) && board[2][2].getText().equals(symbol)) {
+            drawWinningLine(0, 0, 2, 2); // Draw diagonal line
             return true;
         }
+
+        // Check anti-diagonal
         if (board[0][2].getText().equals(symbol) && board[1][1].getText().equals(symbol) && board[2][0].getText().equals(symbol)) {
+            drawWinningLine(0, 2, 2, 0); // Draw anti-diagonal line
             return true;
         }
 
@@ -138,6 +148,20 @@ public class Game {
        }
 
 
+    }
+    private void drawWinningLine(int startRow, int startCol, int endRow, int endCol) {
+        // Calculate the coordinates for the line
+        double cellWidth = gridPane.getWidth() / 3;
+        double cellHeight = gridPane.getHeight() / 3;
+
+
+        winline.setStartX(startCol * cellWidth + cellWidth / 2);
+        winline.setStartY(startRow * cellHeight + cellHeight / 2);
+        winline.setEndX(endCol * cellWidth + cellWidth / 2);
+        winline.setEndY(endRow * cellHeight + cellHeight / 2);
+
+        // Make the line visible
+        winline.setVisible(true);
     }
 
 }
