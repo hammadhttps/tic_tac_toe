@@ -156,18 +156,22 @@ public class Game {
             double cellWidth = gridPane.getWidth() / 3;
             double cellHeight = gridPane.getHeight() / 3;
 
-            // Calculate starting and ending points for the line based on cell positions
-            if (startRow == endRow) { // Horizontal line
+            // Check if it is a horizontal line
+            if (startRow == endRow) {
                 winline.setStartX(startCol * cellWidth);
                 winline.setStartY(startRow * cellHeight + cellHeight / 2);
-                winline.setEndX(endCol * cellWidth + cellWidth);
+                winline.setEndX((endCol + 1) * cellWidth); // Make the line go till the next column
                 winline.setEndY(endRow * cellHeight + cellHeight / 2);
-            } else if (startCol == endCol) { // Vertical line
+            }
+            // Check if it is a vertical line
+            else if (startCol == endCol) {
                 winline.setStartX(startCol * cellWidth + cellWidth / 2);
                 winline.setStartY(startRow * cellHeight);
                 winline.setEndX(endCol * cellWidth + cellWidth / 2);
-                winline.setEndY(endRow * cellHeight + cellHeight);
-            } else { // Diagonal or anti-diagonal
+                winline.setEndY((endRow + 1) * cellHeight); // Make the line go till the next row
+            }
+            // Diagonal lines
+            else {
                 winline.setStartX(startCol * cellWidth + cellWidth / 2);
                 winline.setStartY(startRow * cellHeight + cellHeight / 2);
                 winline.setEndX(endCol * cellWidth + cellWidth / 2);
@@ -178,6 +182,7 @@ public class Game {
             winline.setVisible(true);
         });
     }
+
 
 
 }
