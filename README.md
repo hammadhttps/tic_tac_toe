@@ -1,4 +1,4 @@
-#Tic-Tac-Toe Game#
+#Tic-Tac-Toe Game
 ###This is a simple, interactive Tic-Tac-Toe game built using JavaFX. The game allows two players to play Tic-Tac-Toe on a 3x3 grid. Players take turns clicking on the grid to place their respective marks (X or O). The game will declare a winner when a player gets three of their marks in a row, column, or diagonal. If the grid is full and no winner is found, the game will end in a draw.###
 
 ##Features##
