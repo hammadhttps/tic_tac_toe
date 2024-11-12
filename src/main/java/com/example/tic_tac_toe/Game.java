@@ -1,5 +1,6 @@
 package com.example.tic_tac_toe;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -12,6 +13,9 @@ public class Game {
 
     @FXML
     private Label resultLabel;
+
+    @FXML
+    private Button newgame;
 
     private boolean playerXTurn = true;
     private Button[][] board = new Button[3][3];
@@ -113,4 +117,11 @@ public class Game {
         }
         return null;
     }
+    @FXML
+    public  void Start_newgame(ActionEvent actionEvent)
+    {
+
+
+    }
+
 }

@@ -38,7 +38,7 @@
          <font>
             <Font name="Calibri Bold" size="52.0" />
          </font></Label>
-      <Button fx:id="newgame" layoutX="332.0" layoutY="114.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="154.0" style="-fx-background-color: Gray;" text="New Game">
+      <Button fx:id="newgame" layoutX="332.0" layoutY="114.0" mnemonicParsing="false" onAction="#Start_newgame" prefHeight="66.0" prefWidth="154.0" style="-fx-background-color: Gray;" text="New Game">
          <font>
             <Font name="Arial" size="24.0" />
          </font></Button>
