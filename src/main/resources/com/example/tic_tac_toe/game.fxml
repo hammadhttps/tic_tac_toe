@@ -3,6 +3,7 @@
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tic_tac_toe.Game">
@@ -42,5 +43,7 @@
          <font>
             <Font name="Arial" size="24.0" />
          </font></Button>
+      <Line  fx:id="winline" startX="0" startY="0" endX="0" endY="0" stroke="red" strokeWidth="5.0" visible="false" />
+
    </children>
 </AnchorPane>
