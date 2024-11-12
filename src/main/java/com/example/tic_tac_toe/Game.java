@@ -68,13 +68,13 @@ public class Game {
 
         // Check row
         if (board[row][0].getText().equals(symbol) && board[row][1].getText().equals(symbol) && board[row][2].getText().equals(symbol)) {
-            drawWinningLine(row, 0, row, 2); // Draw horizontal line
+            drawWinningLine(row, 0+1, row, 2+1); // Draw horizontal line
             return true;
         }
 
         // Check column
         if (board[0][col].getText().equals(symbol) && board[1][col].getText().equals(symbol) && board[2][col].getText().equals(symbol)) {
-            drawWinningLine(0, col, 2, col); // Draw vertical line
+            drawWinningLine(0+1, col, 2+1, col); // Draw vertical line
             return true;
         }
 
