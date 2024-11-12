@@ -9,4 +9,10 @@
 
 ![Screenshot 2024-11-12 182634](https://github.com/user-attachments/assets/5d81a7f9-c619-4b0a-9181-e7db5af56e69)
 
+![Screenshot 2024-11-12 183144](https://github.com/user-attachments/assets/33263464-a5e1-48aa-a6fa-6101f4505faf)
+
+![Screenshot 2024-11-12 182917](https://github.com/user-attachments/assets/00c6e95a-6af6-4f09-959e-ae2cb9677d27)
+
+
+
 
