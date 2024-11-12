@@ -6,6 +6,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
 
+import static java.lang.Thread.sleep;
+
 public class Game {
 
     @FXML
@@ -118,8 +120,22 @@ public class Game {
         return null;
     }
     @FXML
-    public  void Start_newgame(ActionEvent actionEvent)
-    {
+    public  void Start_newgame(ActionEvent actionEvent) throws InterruptedException {
+
+       if (actionEvent.getSource()==newgame)
+       {
+
+            for(Button[]row:board)
+            {
+                for (Button button:row)
+                {
+                    button.setText("");
+                    button.setDisable(false);
+                }
+            }
+            playerXTurn=true;
+
+       }
 
 
     }
