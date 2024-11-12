@@ -7,12 +7,12 @@
 ### Winning detection: The game checks for horizontal, vertical, and diagonal wins.
 ### Restart functionality: A "New Game" button allows players to reset the game and start fresh.
 
-<img src="![Screenshot 2024-11-12 182634](https://github.com/user-attachments/assets/5d81a7f9-c619-4b0a-9181-e7db5af56e69)" width="300"/>
+<img src="https://github.com/user-attachments/assets/da5d7d93-b1ab-4c78-8dc8-d0d0e3d55285" width="300"/>
 
-![Screenshot 2024-11-12 183144](https://github.com/user-attachments/assets/33263464-a5e1-48aa-a6fa-6101f4505faf)
+<img src="https://github.com/user-attachments/assets/33263464-a5e1-48aa-a6fa-6101f4505faf" width="300"/>
 
-![Screenshot 2024-11-12 182917](https://github.com/user-attachments/assets/00c6e95a-6af6-4f09-959e-ae2cb9677d27)
-
+<img src="https://github.com/user-attachments/assets/00c6e95a-6af6-4f09-959e-ae2cb9677d27" width="300"/>
+ 
 
 
 
